@@ -1,0 +1,161 @@
+body {
+  background-color: #393a3e; /* 배경: 다크모드 */
+  color: white; /* 텍스트 색상 흰색 */
+  justify-content: center; /* flex정렬(column) 세로(Y축) 가운데 정렬 */
+  align-items: center; /* flex정렬(column) 가로(x축) 가운데 정렬 */
+  margin: 0; /* 기본 여백 제거 */
+  height: 70vh; /* 전체 화면의 70%만 사용(로고가 상대적으로 중앙 근처로 보이도록 */
+  display: flex; /* flex 레이아웃 적용용 */
+  flex-direction: column; /* 요소들 세로 방향으로 배치 */
+}
+
+/* header부분 오른쪽 상단 메뉴 */
+
+.top-menu {
+  position: absolute; /* 메뉴를 오른쪽 상단에 고정 */
+  top: 20px; /* 위에서 20픽셀 떨어진 위치에 배치 */
+  right: 30px; /* 오른쪽에서 30픽셀 떨어진 위치에 배치 */
+  display: flex;
+  align-items: center; /* flex정렬(row) 세로(Y축) 가운데 정렬 */
+  gap: 20px; /* 메뉴 항목 간 간격을 20픽셀로 설정 */
+  font-size: 14px; /* 텍스트 크기 14픽셀 */
+  color: white; 
+}
+
+.menu-text {
+  cursor: pointer; /* 마우스 올리면 손 모양 커서로 바뀜 */
+}
+
+.menu-icon {
+  width: 24px; /* 아이콘의 너비를 24픽셀로 고정 */
+  height: 24px; /* 아이콘의 높이를 24픽셀로 고정 */
+  object-fit: contain; /* 이미지가 너비와 높이에 맞게 비율을 유지한 채로 맞춰진다 */
+  cursor: pointer; 
+}
+
+/* header부분 끝 */
+
+/* Google 로고 부분 */
+
+.google {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* 부모 요소 전체 너비를 차지 */
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+  text-align: center; /* 내부 텍스트 중앙 정렬렬 */
+}
+
+/* 구글 폰트에서 복사해온 css코드드 */
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Google 로고 부분 끝 */
+
+/* 검색창 부분 */
+
+form {
+  display: flex; /* 내부 요소들 가로 정렬 */
+  align-items: center;
+  width: 900px; /* 검색창 전체 너비 */
+  padding: 8px 16px; /* 내부 여백 (상하 8px, 좌우 16px) */
+  border-radius: 9999px; /* 양 끝이 둥근 검색창 */
+  background-color: white;
+  margin-top: 20px; /* 로고와의 간격 확보 */
+  position: relative; /* 내부 아이콘들의 absolute 위치 기준점 역할 */
+}
+
+.search-icon {
+  position: absolute; /* form을 기준으로 정확한 위치 지정 */
+  left: 16px; /* 왼쪽에서 16px 띄움 */
+  top: 50%; /* from의 중간 */
+  transform: translateY(-50%); /* 아이콘 자신의 높이의 절반만큼 올려서 완전히 세로 중앙 정렬 */
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: none; /* 마우스 클릭 이벤트에 걸리지 않음 */
+}
+
+input {
+  flex: 1; /* flex에서 남은 공간 전체를 차지하게 한다. (입력창이 최대한 넓어보이게) */
+  border: none; /* 기본 테두리 제거 */
+  outline: none; /* 클릭하거나 입력할 때 생기는 외곽선 제거 */
+  font-size: 16px;
+  padding: 8px 96px 8px 48px; /* 아이콘과 텍스트가 겹치지 않도록 위아래 8px, 왼쪽 48px(돋보기), 오른쪽 96px(마이크+카메라) 여백 설정 */
+  background-color: transparent;
+  color: black;
+  margin-left: 12px; /* 왼쪽 돋보기 아이콘과 입력창 사이에 공간 추가가 */
+}
+
+.mic-icon {
+  position: absolute;
+  right: 56px; /* 오른쪽에서 56px 띄움움 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.camera-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 검색창 부분 끝 */
+
+.shortcut-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.shortcut-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #2d2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.shortcut-circle img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.shortcut-label {
+  text-align: center;
+}

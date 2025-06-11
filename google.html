@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google</title>
+
+  <!-- 구글 폰트에서 Poppins폰트 적용-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!--css 연결-->
+  <link rel="stylesheet" href="google.css" />
+</head>
+<body>
+
+  <!--오른쪽 상단 메뉴바-->
+  <header class="top-menu">
+    <span class="menu-text">Gmail</span>
+    <span class="menu-text">이미지</span>
+    <img src="science.png" alt="Search Labs" class="menu-icon">
+    <img src="apps.png" alt="Google 앱" class="menu-icon">
+  </header>
+
+  <!--로고, 검색창, 바로가기-->
+  <main class="google">
+
+    <!--구글 로고 텍스트-->
+    <div class="logo-container">
+      <h1 class="poppins-regular">Google</h1>
+    </div>
+
+    <!--검색창-->
+    <form action="#">
+      <img src="search.png" alt="search" class="search-icon" />
+      <input type="text" placeholder="Google 검색 또는 URL 입력" />
+      <img src="googlemike.png" alt="mike" class="mic-icon">
+      <img src="googlecamera.png" alt="camera" class="camera-icon" />
+    </form>    
+    
+    <!--바로가기-->
+    <div class="shortcut-container">
+
+      <!--대한항공 바로가기-->
+      <div class="shortcut">
+        <div class="shortcut-circle">
+          <img src="air.png" alt="대한항공" />
+        </div>
+        <span class="shortcut-label">대한항공</span>
+      </div>
+
+      <!--유튜브 바로가기-->
+      <div class="shortcut">
+        <div class="shortcut-circle">
+          <img src="youtu.png" alt="유튜브" />
+        </div>
+        <span class="shortcut-label">유튜브</span>
+      </div>
+
+      <!--바로가기 추가-->
+      <div class="shortcut">
+        <div class="shortcut-circle">
+          <img src="add.png" alt="바로가기 추가" />
+        </div>
+        <span class="shortcut-label">바로가기 추가</span>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
